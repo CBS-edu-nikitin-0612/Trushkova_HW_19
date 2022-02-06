@@ -1,8 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Task2;
+using Task2; //без явного указания не работает программа, тк не видит другие классы
 
 Console.WriteLine("Hello, Teacher!");
 
+//Вывод списка цветов по умолчанию
 Console.WriteLine("Список цветов:");
 Array namesColor = Enum.GetValues(typeof(ColorText));
 
@@ -15,6 +16,7 @@ while (true)
 {
     try
     {
+        //Получение строки от пользователя
         Console.WriteLine("\nВведите строку:");
         string? stroka = Console.ReadLine();
         if (!string.IsNullOrWhiteSpace(stroka))
@@ -27,7 +29,8 @@ while (true)
             {
                 if (Enum.TryParse(typeof(ColorText), color, true, out object? colorText) && colorText != null
                     && Enum.IsDefined(typeof(ColorText), colorText))                    
-                        Printer.Print(stroka, (int)colorText);
+                    //Вывод строки с указанным цветом
+                    Printer.Print(stroka, (int)colorText);
 
                 else throw ExceptionColor.ExceptionNoColor;
             }

@@ -2,6 +2,7 @@
 {
     internal static class Accountant
     {
+        //Проверка достанется ли сотруднику премия исходя из количества отработанных часов в неделю 
         public static bool AskForBonus(Post worker, int hours)
         {
             bool isGiven = false;

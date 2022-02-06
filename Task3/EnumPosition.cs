@@ -1,5 +1,6 @@
 ﻿namespace Task3
 {
+    //Список должностей и часов работы в неделю по умолчанию
     internal enum EnumPosition
     {
         CEO = 70,
